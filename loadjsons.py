@@ -11,7 +11,7 @@ FULL_API_URL = "https://api.scryfall.com/bulk-data/default-cards"
 
 downloadNew = False
 updateOracle = True
-updatePairs = True
+updatePairs = False
 
 oracleData = None
 
@@ -78,10 +78,44 @@ def update_oracle_with_first_set_and_sets_list(oracle_path, full_path):
     with open(oracle_path, 'r') as oracle_file:
         oracle_data = json.load(oracle_file)
 
-    #filter out type 'card' or 'card//card' and stickers and vanguards
-    oracle_data = [card for card in oracle_data if 'oracle_id' in card and not ("Card" in card.get('type_line') or card.get('type_line') == "Stickers" or card.get('type_line') == "Vanguard" or "Token" in card.get('type_line'))]
-    #filter out 'unknown event' cards
-    oracle_data = [card for card in oracle_data if (card.get('set_name')) != "Unknown Event"]
+    # Filter out unwanted cards based on 'type_line' and 'set_name'
+    oracle_data = [
+        card for card in oracle_data
+        if 'oracle_id' in card and not (
+                "Card" in card.get('type_line', '') or
+                "Token" in card.get('type_line', '') or
+                card.get('type_line') in {"Stickers", "Vanguard"} or
+                card.get('set_name') == "Unknown Event"
+        )
+    ]
+
+    print("Removing unnecessary fields...")
+    # Define the fields to be removed
+    fields_to_remove = {
+        "mtgo_id", "mtgo_foil_id", "prices", "related_uris",
+        "edhrec_rank", "story_spotlight", "full_art", "textless",
+        "set_search_uri", "prints_search_uri", "lang", "games",
+        "reserved", "foil", "nonfoil", "finishes", "oversized",
+        "reprint", "set_id", "rulings_uri", "digital", "flavor_text",
+        "set_type", "set_uri", "scryfall_set_uri", "card_back_id",
+        "artist", "illustration_id", "border_color", "frame", "booster",
+        "tcgplayer_id", "cardmarket_id", "layout", "highres_image",
+        "image_status", "promo", "variation", "set", "set_name",
+        "artist_ids", "multiverse_ids", "released_at", "security_stamp",
+        "preview", "penny_rank", "arena_id", "pomo_types", "collector_number"
+    }
+    legalities_to_remove = {
+        "future", "historic", "timeless", "gladiator", "pioneer",
+        "explorer", "legacy", "vintage", "penny", "oathbreaker",
+        "standardbrawl", "brawl", "alchemy", "paupercommander",
+        "duel", "oldschool", "premodern", "predh"
+    }
+    for card in oracle_data:
+        for field in fields_to_remove:
+            card.pop(field, None)  # Remove the field if it exists, ignore if not
+        if "legalities" in card:
+            for key in legalities_to_remove:
+                card["legalities"].pop(key, None)
 
     print("Updating oracle JSON with sets data...")
     # Update each card in 'oracle' with "first_set" and "sets_list"
@@ -100,7 +134,7 @@ def update_oracle_with_first_set_and_sets_list(oracle_path, full_path):
     with open(oracle_path, 'w') as oracle_file:
         json.dump(oracle_data, oracle_file, indent=4)
 
-    print("oracle.json updated with 'first_set' and 'sets_list' for each card.\n")
+    print("oracle.json updated with 'first_set' and 'sets_list' for each card.")
 
 def saveValidPairs(challengesPath, pairsPath):
     print("Opening challenges JSON...")
