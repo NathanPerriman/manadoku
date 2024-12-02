@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4x4 Puzzle Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            /* 4 equal columns */
+            grid-template-rows: repeat(4, 1fr);
+            /* 4 equal rows */
+            gap: 10px;
+            width: 400px;
+            height: 400px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+        }
+
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .grid-item.empty {
+            background-color: #e0e0e0;
+            border: none;
+        }
+
+        .grid-item.completed {
+            background-color: blue;
+            pointer-events: none; /* Prevent further clicks */
+        }
+
+        .grid-item.incorrect {
+            background-color: orange;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #promptText {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+
+        #userInput {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button#closeButton {
+            background-color: #dc3545;
+        }
+
+        button#closeButton:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>4x4 Puzzle Grid</h1>
+    <div class="grid-container" id="grid">
+        <!-- The grid items will be dynamically inserted here -->
+    </div>
+    <div id="inputModal" class="modal hidden">
+        <div class="modal-content">
+            <p id="promptText"></p> <!-- Placeholder for the prompt -->
+            <input type="text" id="userInput" placeholder="Enter your answer here">
+            <button id="submitButton">Submit</button>
+            <button id="closeButton">Close</button>
+        </div>
+    </div>
+
+    <script>
+        fetch("/get_strings")
+            .then(response => response.json())
+            .then(data => {
+                console.log("Data received from backend:", data);
+                const gridContainer = document.getElementById("grid");
+                const modal = document.getElementById("inputModal");
+                const promptText = document.getElementById("promptText");
+                const userInput = document.getElementById("userInput");
+                const submitButton = document.getElementById("submitButton");
+                const closeButton = document.getElementById("closeButton");
+
+                const grid = data.grid; // Array of strings or objects
+
+                let currentRowObject = null;
+                let currentColObject = null;
+                let curretnRow = null;
+                let currentCol = null;
+
+                for (let row = 0; row < 4; row++) {
+                    for (let col = 0; col < 4; col++) {
+                        const gridItem = document.createElement("div");
+                        gridItem.className = "grid-item";
+
+                        let itemIndex;
+                        if (col === 0 && row < 4) itemIndex = row;
+                        if (row === 0 && col > 0 && col < 4) itemIndex = 3 + col;
+
+                        if (itemIndex !== undefined && grid[itemIndex]) {
+                            const item = grid[itemIndex];
+                            if (typeof item === "string") {
+                                gridItem.innerText = item;
+                            } else {
+                                const formattedText = `${item.name}: ${item.challenge}`;
+                                gridItem.innerText = formattedText;
+                            }
+                        } else {
+                            gridItem.classList.add("empty");
+                            gridItem.addEventListener("click", () => {
+
+                                currentRow = row
+                                currentCol = col
+
+                                currentRowObject = grid[row]
+                                currentColObject = grid[3+col]
+                                
+                                const rowLabel = grid[row];
+                                const colLabel = grid[3 + col];
+
+                                // Extracting and formatting row and column labels
+                                const formattedRowLabel = typeof rowLabel === "string"
+                                    ? rowLabel
+                                    : `${rowLabel.name}: ${rowLabel.challenge}`;
+                                const formattedColLabel = typeof colLabel === "string"
+                                    ? colLabel
+                                    : `${colLabel.name}: ${colLabel.challenge}`;
+
+                                // Setting the prompt text
+                                promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
+                                modal.classList.remove("hidden");
+                            });
+                        }
+
+                        gridContainer.appendChild(gridItem);
+                    }
+                }
+
+                // Modal functionality
+                closeButton.addEventListener("click", () => {
+                    modal.classList.add("hidden");
+                    userInput.value = ""; // Clear input on close
+                });
+
+                submitButton.addEventListener("click", () => {
+                    const userAnswer = userInput.value;
+
+                    fetch("/submit_answer", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ 
+                            answer: userAnswer,
+                            row: currentRow,
+                            col: currentCol,
+                            rowObject: currentRowObject,
+                            colObject: currentColObject
+                         })
+                    })
+                        .then(response => response.json())
+                        .then(result => {
+                            console.log("Submission result:", result);
+                            // Handle success or error response here
+                            const gridItems = document.querySelectorAll(".grid-item");
+                            const targetBox = gridItems[result.row * 4 + result.col]; // Assuming 4x4 grid
+                            if (result.success) {
+                                // If the condition is met, find the grid box to update
+                                targetBox.classList.remove("incorrect")
+                                targetBox.classList.add("completed");
+                            } else {
+                                targetBox.classList.add("incorrect")
+                            }
+                        })
+                        .catch(error => console.error("Error submitting answer:", error));
+
+                    modal.classList.add("hidden");
+                    userInput.value = ""; // Clear input after submission
+                });
+                userInput.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter") {
+                        event.preventDefault();
+                        submitButton.click();
+                    }
+                });
+            })
+            .catch(error => {
+                console.error("Error fetching grid values:", error);
+                const gridContainer = document.getElementById("grid");
+                gridContainer.innerHTML = "<p>Error loading grid. Please try again.</p>";
+            });
+
+
+    </script>
+</body>
+
+</html>

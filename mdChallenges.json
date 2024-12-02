@@ -1,0 +1,1060 @@
+{
+    "challenges" : [
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Creature",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Instant",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Sorcery",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Enchantment",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Artifact",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "1",
+            "challenge" : "Legendary",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "2",
+            "challenge" : "Land",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "2",
+            "challenge" : "Aura",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "2",
+            "challenge" : "Equipment",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "2",
+            "challenge" : "Planeswalker",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "3",
+            "challenge" : "Vehicle",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "3",
+            "challenge" : "Adventure",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "3",
+            "challenge" : "Conspiracy",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "3",
+            "challenge" : "Curse",
+            "progresses" : "T"
+        },
+        {
+            "name": "Type",
+            "compare" : "type_line",
+            "difficulty" : "3",
+            "challenge" : "Room",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Vigilance",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Haste",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Flying",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Trample",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Lifelink",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Mill",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Flash",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "1",
+            "challenge" : "Deathtouch",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Menace",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Reach",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "First strike",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Cycling",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Kicker",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Defender",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "2",
+            "challenge" : "Ward",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Landwalk",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Flashback",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Double strike",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Affinity",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Goad",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Infect",
+            "progresses" : "T"
+        },
+        {
+            "name": "Keyword",
+            "compare" : "keywords",
+            "difficulty" : "3",
+            "challenge" : "Devoid",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "W",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "U",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "B",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "R",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "G",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "1",
+            "challenge" : "Multicolour",
+            "progresses" : "F"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "Colourless",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "WU",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "WB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "WR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "WG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "UB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "UR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "UG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "BR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "BG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "2",
+            "challenge" : "RG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WUB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WUR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WUG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WBR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WBG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "WRG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "UBR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "UBG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "URG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Colour",
+            "compare" : "colors",
+            "difficulty" : "3",
+            "challenge" : "BRG",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "W",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "U",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "B",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "R",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "G",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "1",
+            "challenge" : "Multicolour",
+            "progresses" : "F"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "Colourless",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "WU",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "WB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "WR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "WG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "UB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "UR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "UG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "BR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "BG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "2",
+            "challenge" : "RG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WUB",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WUR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WUG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WBR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WBG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "WRG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "UBR",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "UBG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "URG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Identity",
+            "compare" : "color_identity",
+            "difficulty" : "3",
+            "challenge" : "BRG",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Mana Cost",
+            "compare" : "mana_cost",
+            "difficulty" : "2",
+            "challenge" : "{X}",
+            "progresses" : "T"
+        },
+        {
+            "name": "Mana Cost",
+            "compare" : "mana_cost",
+            "difficulty" : "2",
+            "challenge" : "Split",
+            "progresses" : "T"
+        },
+        {
+            "name": "Mana Cost",
+            "compare" : "mana_cost",
+            "difficulty" : "3",
+            "challenge" : "{X}{X}",
+            "progresses" : "T"
+        },
+        {
+            "name": "Mana Cost",
+            "compare" : "mana_cost",
+            "difficulty" : "3",
+            "challenge" : "Phyrexian",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "1",
+            "challenge" : "0,1,2",
+            "progresses" : "F"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "1",
+            "challenge" : "3,4,5",
+            "progresses" : "F"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "1",
+            "challenge" : "6+",
+            "progresses" : "F"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "0",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "1",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "2",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "3",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "4",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "5",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "6",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "2",
+            "challenge" : "7",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "3",
+            "challenge" : "8",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "3",
+            "challenge" : "9",
+            "progresses" : "T"
+        },
+        {
+            "name": "Converted Mana Cost",
+            "compare" : "cmc",
+            "difficulty" : "3",
+            "challenge" : "10+",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "1",
+            "challenge" : "Coloured",
+            "progresses" : "F"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "1",
+            "challenge" : "Colourless",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "2",
+            "challenge" : "WUBRG",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "3",
+            "challenge" : "W",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "3",
+            "challenge" : "U",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "3",
+            "challenge" : "B",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "3",
+            "challenge" : "R",
+            "progresses" : "T"
+        },
+        {
+            "name": "Produced Mana",
+            "compare" : "produced_mana",
+            "difficulty" : "3",
+            "challenge" : "G",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Format Legalities",
+            "compare" : "legalities",
+            "difficulty" : "2",
+            "challenge" : "commanderBanned",
+            "progresses" : "T"
+        },
+        {
+            "name": "Format Legalities",
+            "compare" : "legalities",
+            "difficulty" : "2",
+            "challenge" : "modernBanned",
+            "progresses" : "T"
+        },
+        {
+            "name": "Format Legalities",
+            "compare" : "legalities",
+            "difficulty" : "2",
+            "challenge" : "standardLegal",
+            "progresses" : "T"
+        },
+        {
+            "name": "Format Legalities",
+            "compare" : "legalities",
+            "difficulty" : "3",
+            "challenge" : "pauperBanned",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "1",
+            "challenge" : "0,1,2",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "1",
+            "challenge" : "3,4,5",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "1",
+            "challenge" : "6,7,8",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "0",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "1",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "2",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "3",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "4",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "5",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "6",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "2",
+            "challenge" : "7",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "3",
+            "challenge" : "8+",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Power",
+            "compare" : "power",
+            "difficulty" : "3",
+            "challenge" : "*",
+            "progresses" : "T"
+        },
+
+
+
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "1",
+            "challenge" : "1,2",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "1",
+            "challenge" : "3,4,5",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "1",
+            "challenge" : "6,7,8",
+            "progresses" : "F"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "1",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "2",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "3",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "4",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "5",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "6",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "2",
+            "challenge" : "7",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "3",
+            "challenge" : "8+",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "3",
+            "challenge" : "*",
+            "progresses" : "T"
+        },
+        {
+            "name": "Creature Toughness",
+            "compare" : "toughness",
+            "difficulty" : "3",
+            "challenge" : "0",
+            "progresses" : "T"
+        }
+    ]
+}

@@ -1,0 +1,256 @@
+[
+    {
+        "object": "category",
+        "name" : "type",
+        "compare" : "type_line",
+        "easy" : [
+            "Creature",
+            "Instant",
+            "Sorcery",
+            "Enchantment",
+            "Artifact",
+            "Land",
+            "Legendary"
+        ],
+        "medium" : [
+            "Aura",
+            "Equipment",
+            "Vehicle",
+            "Planeswalker"
+        ],
+        "hard" : [
+            "Conspiracy",
+            "Curse",
+            "Room"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "keyword",
+        "compare" : "keywords",
+        "easy" : [
+            "Vigilance",
+            "Haste",
+            "Flying",
+            "Trample",
+            "Lifelink",
+            "Mill",
+            "Flash",
+            "Menace",
+            "Reach",
+            "First strike",
+            "Deathtouch"
+        ],
+        "medium": [
+            "Cycling",
+            "Ward",
+            "Landwalk",
+            "Kicker",
+            "Flashback",
+            "Defender",
+            "Double strike"
+        ],
+        "hard": [
+            "Shroud",
+            "Affinity",
+            "Infect",
+            "Devoid",
+            "Goad",
+            "Persist"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "colour",
+        "compare" : "colors",
+        "easy" : [
+            "W",
+            "U",
+            "B",
+            "R",
+            "G",
+            "Multicolour"
+        ],
+        "medium" : [
+            "Colourless",
+            "WU",
+            "WB",
+            "WR",
+            "WG",
+            "UB",
+            "UR",
+            "UG",
+            "BR",
+            "BG",
+            "RG"
+        ],
+        "hard" : [
+            "WUB",
+            "WUR",
+            "WUG",
+            "WBR",
+            "WBG",
+            "WRG",
+            "UBR",
+            "UBG",
+            "URG",
+            "BRG"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "identity",
+        "compare" : "color_identity",
+        "easy" : [
+            "W",
+            "U",
+            "B",
+            "R",
+            "G",
+            "Multicolour"
+        ],
+        "medium" : [
+            "Colourless",
+            "WU",
+            "WB",
+            "WR",
+            "WG",
+            "UB",
+            "UR",
+            "UG",
+            "BR",
+            "BG",
+            "RG"
+        ],
+        "hard" : [
+            "WUB",
+            "WUR",
+            "WUG",
+            "WBR",
+            "WBG",
+            "WRG",
+            "UBR",
+            "UBG",
+            "URG",
+            "BRG"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "costIncludes",
+        "compare" : "mana_cost",
+        "medium": [
+            "{X}",
+            "Split"
+        ],
+        "hard": [
+            "Phyrexian",
+            "{X}{X}"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "cmc",
+        "compare" : "cmc",
+        "medium": [
+            "0,1,2",
+            "3,4,5",
+            "6+"
+        ],
+        "hard": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10+"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "ability",
+        "compare" : "oracle_text",
+        "medium": [
+            "+x/+y",
+            "carddraw",
+            "dealsdamage",
+            "createtoken",
+            "tapability",
+            "exile",
+            "searchlibrary"
+        ],
+        "hard": [
+            "regenerate",
+            "entertapped",
+            "gaincontrol",
+            "choosecolour"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "produces",
+        "compare" : "produced_mana",
+        "medium": [
+            "Coloured",
+            "Colourless"
+        ],
+        "hard": [
+            "W",
+            "U",
+            "B",
+            "R",
+            "G"
+        ]
+    },
+    {
+        "object": "category",
+        "name" : "format",
+        "compare" : "legalities",
+        "medium" : [
+            "commanderBanned",
+            "modernBanned",
+            "standardLegal"
+        ],
+        "hard" : [
+            "pauperBanned"
+        ]
+    },
+    {
+        "object": "category",
+        "name": "creaturePower",
+        "compare": "power",
+        "easy": [
+            "0,1,2",
+            "3,4,5"
+        ],
+        "medium": [
+            "6,7,8",
+            "9+"
+        ],
+        "hard": [
+            "*"
+        ]
+    },
+    {
+        "object": "category",
+        "name": "creatureToughness",
+        "compare": "toughness",
+        "easy": [
+            "1,2",
+            "3,4,5"
+        ],
+        "medium": [
+            "6,7,8",
+            "9+",
+            "0"
+        ],
+        "hard": [
+            "*"
+        ]
+    }
+]
