@@ -128,7 +128,6 @@
     </div>
 
     <script>
-        gridContainer.innerHTML = "<p>Loading grid...</p>";
         fetch("https://manadoku.onrender.com/get_strings")
             .then(response => response.json())
             .then(data => {
