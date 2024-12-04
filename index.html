@@ -202,7 +202,7 @@
                 submitButton.addEventListener("click", () => {
                     const userAnswer = userInput.value;
 
-                    fetch("/submit_answer", {
+                    fetch("https://manadoku.onrender.com/submit_answer", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"
