@@ -1,16 +1,29 @@
 from flask import Flask, render_template, jsonify, request
 from flask_cors import CORS
+from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime
 import makeGrid
 app = Flask(__name__)
 CORS(app)
 
 def init():
     makeGrid.loadData()
+
+def makeDaily():
+    print("**Create Daily Puzzle Here**")
+
+scheduler = BackgroundScheduler()
+scheduler.add_job(makeDaily, 'interval', days=1, start_date='2024-12-04 00:00:00', timezone='EST')
+scheduler.start()
 init()
+
+
 
 @app.route('/get_strings')
 def getStrings():
+    #get daily puzzle
     grid = makeGrid.getRandomGrid()
+    #replace this
     return jsonify({'grid': grid})
 
 @app.route("/submit_answer", methods=["POST"])
