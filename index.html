@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4x4 Puzzle Grid</title>
+    <title>Manadoku</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,6 +28,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            text-align: center;
             border: 1px solid #ccc;
             background-color: #fff;
             font-size: 14px;
@@ -113,7 +114,7 @@
 </head>
 
 <body>
-    <h1>4x4 Puzzle Grid</h1>
+    <h1>Manadoku - Random MTG Grid Puzzle</h1>
     <div class="grid-container" id="grid">
         <!-- The grid items will be dynamically inserted here -->
     </div>
@@ -127,6 +128,7 @@
     </div>
 
     <script>
+        gridContainer.innerHTML = "<p>Loading grid...</p>";
         fetch("https://manadoku.onrender.com/get_strings")
             .then(response => response.json())
             .then(data => {
@@ -157,7 +159,21 @@
                         if (itemIndex !== undefined && grid[itemIndex]) {
                             const item = grid[itemIndex];
                             if (typeof item === "string") {
-                                gridItem.innerText = item;
+                                let label;
+                                switch (item) {
+                                    case "1":
+                                        label = "Easy";
+                                        break;
+                                    case "2":
+                                        label = "Medium";
+                                        break;
+                                    case "3":
+                                        label = "Hard";
+                                        break;
+                                    default:
+                                        label = item; // If it's not 1, 2, or 3, just keep it as it is
+                                }
+                                gridItem.innerText = label;
                             } else {
                                 const formattedText = `${item.name}: ${item.challenge}`;
                                 gridItem.innerText = formattedText;
