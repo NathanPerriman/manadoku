@@ -4,6 +4,10 @@ import makeGrid
 app = Flask(__name__)
 CORS(app)
 
+@app.before_first_request
+def init():
+    makeGrid.loadData()
+
 @app.route('/get_strings')
 def getStrings():
     grid = makeGrid.getRandomGrid()
