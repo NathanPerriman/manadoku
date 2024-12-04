@@ -4,9 +4,9 @@ import makeGrid
 app = Flask(__name__)
 CORS(app)
 
-@app.before_first_request
 def init():
     makeGrid.loadData()
+init()
 
 @app.route('/get_strings')
 def getStrings():
