@@ -1,4 +1,3 @@
-from Scripts.makeGrid import checkSubmission
 from flask import Flask, render_template, jsonify, request
 import makeGrid
 app = Flask(__name__)
