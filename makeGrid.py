@@ -141,7 +141,7 @@ def checkSubmission(userText, rowChallenge, colChallenge):
     userCard = cardDict.get(scrubText(userText))
     if userCard is None:
         print("Cannot find card!")
-        return False
+        return False, None
     return (meetsChallenge(rowChallenge, userCard) and meetsChallenge(colChallenge, userCard)), userCard["image_uris"]["normal"]
 
 def main():
