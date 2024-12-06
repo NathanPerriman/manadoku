@@ -142,7 +142,7 @@ def checkSubmission(userText, rowChallenge, colChallenge):
     if userCard is None:
         print("Cannot find card!")
         return False
-    return meetsChallenge(rowChallenge, userCard) and meetsChallenge(colChallenge, userCard)
+    return (meetsChallenge(rowChallenge, userCard) and meetsChallenge(colChallenge, userCard)), userCard["image_uris"]["normal"]
 
 def main():
     loadData()

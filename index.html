@@ -237,9 +237,14 @@
                             const gridItems = document.querySelectorAll(".grid-item");
                             const targetBox = gridItems[result.row * 4 + result.col]; // Assuming 4x4 grid
                             if (result.success) {
-                                // If the condition is met, find the grid box to update
                                 targetBox.classList.remove("incorrect")
                                 targetBox.classList.add("completed");
+                                const img = document.createElement('img')
+                                img.src = result.img
+                                img.alt = "Card Image"
+                                img.style.width = "100%"
+                                img.style.height = "100%"
+                                targetBox.appendChild(img)
                             } else {
                                 targetBox.classList.add("incorrect")
                             }

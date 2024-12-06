@@ -42,10 +42,10 @@ def submit_answer():
 
     #print(f"User submitted: {user_answer}")
     #print(f"Categories: {str(row)} + {str(col)}")
-    ans = makeGrid.checkSubmission(user_answer, row, col)
+    ans, img = makeGrid.checkSubmission(user_answer, row, col)
     #print(str("Success? "+str(ans)))
 
-    return jsonify({"success": ans, "row": rowNum, "col": colNum})
+    return jsonify({"success": ans, "row": rowNum, "col": colNum, "img": img})
 
 #http://127.0.0.1:5000
 
