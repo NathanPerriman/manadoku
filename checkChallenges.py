@@ -62,7 +62,7 @@ def meetsChallenge(challenge, entry):
                     else:
                         success = entryComp.get(keyword) == "banned"
 
-        elif challenge["name"] == "Creature Power" or challenge["name"] == "Creature Toughness":
+        elif challenge["name"] == "Power" or challenge["name"] == "Toughness":
             if entryComp == "*":
                 success = challengeGoal == "*"
             elif challengeGoal.isdigit():

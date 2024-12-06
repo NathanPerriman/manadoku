@@ -872,91 +872,91 @@
 
 
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "1",
             "challenge" : "0,1,2",
             "progresses" : "F"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "1",
             "challenge" : "3,4,5",
             "progresses" : "F"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "1",
             "challenge" : "6,7,8",
             "progresses" : "F"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "0",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "1",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "2",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "3",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "4",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "5",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "6",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "2",
             "challenge" : "7",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "3",
             "challenge" : "8+",
             "progresses" : "T"
         },
         {
-            "name": "Creature Power",
+            "name": "Power",
             "compare" : "power",
             "difficulty" : "3",
             "challenge" : "*",
@@ -966,91 +966,91 @@
 
 
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "1",
             "challenge" : "1,2",
             "progresses" : "F"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "1",
             "challenge" : "3,4,5",
             "progresses" : "F"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "1",
             "challenge" : "6,7,8",
             "progresses" : "F"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "1",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "2",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "3",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "4",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "5",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "6",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "2",
             "challenge" : "7",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "3",
             "challenge" : "8+",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "3",
             "challenge" : "*",
             "progresses" : "T"
         },
         {
-            "name": "Creature Toughness",
+            "name": "Toughness",
             "compare" : "toughness",
             "difficulty" : "3",
             "challenge" : "0",
