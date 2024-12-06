@@ -102,7 +102,8 @@ def update_oracle_with_first_set_and_sets_list(oracle_path, full_path):
         "tcgplayer_id", "cardmarket_id", "layout", "highres_image",
         "image_status", "promo", "variation", "set", "set_name",
         "artist_ids", "multiverse_ids", "released_at", "security_stamp",
-        "preview", "penny_rank", "arena_id", "pomo_types", "collector_number"
+        "preview", "penny_rank", "arena_id", "pomo_types", "collector_number",
+        "watermark", "frame_effects", "all_parts"
     }
     legalities_to_remove = {
         "future", "historic", "timeless", "gladiator", "pioneer",
