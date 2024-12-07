@@ -7,8 +7,6 @@ from checkChallenges import meetsChallenge
 def scrubText(text):
     # Convert text to lowercase
     text = text.lower()
-    # Remove standalone occurrences of "the" using regex with word boundaries
-    text = re.sub(r'\bthe\b', '', text)
     # Remove punctuation and whitespace
     text = re.sub(r'[^\w]', '', text)
     return text
@@ -16,7 +14,7 @@ def scrubText(text):
 chalData = None
 validPairs = None
 oracleData = None
-cardDict = None
+cardDict = {}
 
 def loadData():
     global chalData
@@ -31,7 +29,12 @@ def loadData():
     with open('oracle.json', 'r') as oracleFile:
         oracleData = json.load(oracleFile)
     global cardDict
-    cardDict = {scrubText(card['name']): card for card in oracleData}
+    for card in oracleData:
+        cardDict[scrubText(card['name'])] = card
+        if '//' in card['name']:
+            parts = card['name'].split('//')
+            for part in parts:
+                cardDict[scrubText(part)] = card
 
 def getFullChallenge(challengeName, challengeChal):
     for challenge in chalData["challenges"]:
