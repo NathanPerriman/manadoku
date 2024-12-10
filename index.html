@@ -127,6 +127,9 @@
             <button id="closeButton">Close</button>
         </div>
     </div>
+    <div id="loadingWarning" style="text-align: center; color: red; margin-top: 10px;">
+        <p>Note: This website currently uses a free Render database. The first load after a period of inactivity may take up to 50s.</p>
+    </div>
 
     <script>
         fetch("https://manadoku.onrender.com/get_strings")
@@ -186,8 +189,8 @@
                                 currentCol = col
 
                                 currentRowObject = grid[row]
-                                currentColObject = grid[3+col]
-                                
+                                currentColObject = grid[3 + col]
+
                                 const rowLabel = grid[row];
                                 const colLabel = grid[3 + col];
 
@@ -223,13 +226,13 @@
                         headers: {
                             "Content-Type": "application/json"
                         },
-                        body: JSON.stringify({ 
+                        body: JSON.stringify({
                             answer: userAnswer,
                             row: currentRow,
                             col: currentCol,
                             rowObject: currentRowObject,
                             colObject: currentColObject
-                         })
+                        })
                     })
                         .then(response => response.json())
                         .then(result => {
