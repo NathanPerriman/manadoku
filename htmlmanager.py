@@ -3,8 +3,19 @@ from flask_cors import CORS
 from apscheduler.schedulers.background import BackgroundScheduler
 from datetime import datetime
 import makeGrid
+import sqlite3
+import json
 app = Flask(__name__)
 CORS(app)
+
+def init_db():
+    conn = sqlite3.connect('puzzles.db')
+    cursor = conn.cursor()
+    cursor.execute('''CREATE TABLE IF NOT EXISTS daily_puzzles (
+                        date TEXT PRIMARY KEY,
+                        puzzle_data TEXT)''')
+    conn.commit()
+    conn.close()
 
 def init():
     makeGrid.loadData()
@@ -17,7 +28,10 @@ scheduler.add_job(makeDaily, 'interval', days=1, start_date='2024-12-04 00:00:00
 scheduler.start()
 init()
 
-
+@app.before_request
+def setup():
+    app.before_request_funcs[None].remove(setup)
+    init_db()
 
 @app.route('/get_strings')
 def getStrings():
