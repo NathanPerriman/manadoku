@@ -12,32 +12,31 @@
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            /* 4 equal columns */
-            grid-template-rows: repeat(4, 1fr);
-            /* 4 equal rows */
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 10px;
-            width: 640px;
-            height: 640px;
+            max-width: 640px;
             margin: 20px auto;
-            border: 2px solid #333;
-            background-color: #f0f0f0;
         }
 
         .grid-item {
-            width: 100%;
-            aspect-ratio: 0.714 / 1;
-            border: 1px solid black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #fff;
-            font-size: 14px;
-            font-weight: bold;
-            object-fit: contain;
-        }
+    aspect-ratio: 0.714 / 1;
+    width: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
 
         .grid-item.empty {
             background-color: #e0e0e0;
