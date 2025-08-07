@@ -24,8 +24,30 @@ function fetchAndRenderGrid() {
 
             for (let row = 0; row < 4; row++) {
                 for (let col = 0; col < 4; col++) {
+
+                    //THIS IS WHERE I MAKE A FLIPPABLE CARD
                     const gridItem = document.createElement("div");
-                    gridItem.className = "grid-item";
+                    gridItem.classList.add("grid-item");
+
+                    const cardInner = document.createElement("div");
+                    cardInner.classList.add("card-inner");
+
+                    const cardFront = document.createElement("div");
+                    cardFront.classList.add("card-front");
+                    const frontImg = document.createElement("img");
+                    frontImg.src = "cardback-greyscale.png";
+                    frontImg.alt = "Card Back";
+                    frontImg.style.width = "100%";
+                    frontImg.style.height = "100%";
+                    frontImg.style.objectFit = "contain";
+                    cardFront.appendChild(frontImg);
+
+                    const cardBack = document.createElement("div");
+                    cardBack.classList.add("card-back"); //will be filled later
+
+                    cardInner.appendChild(cardFront);
+                    cardInner.appendChild(cardBack);
+                    gridItem.appendChild(cardInner);
 
                     const itemIndex = getGridItemIndex(row, col);
                     if (itemIndex !== undefined && grid[itemIndex]) {
@@ -146,8 +168,12 @@ function updateGridOnSubmission(result) {
         img.style.maxHeight = "100%";
         img.style.objectFit = "contain";
         img.style.display = "block";
-        targetBox.innerHTML = "";
-        targetBox.appendChild(img);
+
+        const cardBack = targetBox.querySelector(".card-back");
+        cardBack.innerHTML = "";
+        cardBack.appendChild(img);
+
+        targetBox.classList.add("flipped");
     } else {
         targetBox.classList.add("incorrect");
     }
