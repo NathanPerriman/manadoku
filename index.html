@@ -119,170 +119,24 @@
 </head>
 
 <body>
-    <h1>Manadoku - Random MTG Grid Puzzle</h1>
-    <div class="grid-container" id="grid">
-        <!-- The grid items will be dynamically inserted here -->
+<h1>Manadoku - Random MTG Grid Puzzle</h1>
+<div class="grid-container" id="grid">
+    <!-- The grid items will be dynamically inserted here -->
+</div>
+<div id="inputModal" class="modal hidden">
+    <div class="modal-content">
+        <p id="promptText"></p> <!-- Placeholder for the prompt -->
+        <input type="text" id="userInput" placeholder="Enter your answer here">
+        <button id="submitButton">Submit</button>
+        <button id="closeButton">Close</button>
     </div>
-    <div id="inputModal" class="modal hidden">
-        <div class="modal-content">
-            <p id="promptText"></p> <!-- Placeholder for the prompt -->
-            <input type="text" id="userInput" placeholder="Enter your answer here">
-            <button id="submitButton">Submit</button>
-            <button id="closeButton">Close</button>
-        </div>
-    </div>
-    <div id="loadingWarning" style="text-align: center; color: red; margin-top: 10px;">
-        <p>Note: This website currently uses a free Render database. The first load after a period of inactivity may take up to 50s.</p>
-    </div>
+</div>
+<div id="loadingWarning" style="text-align: center; color: red; margin-top: 10px;">
+    <p>Note: This website currently uses a free Render database. The first load after a period of inactivity may take up
+        to 50s.</p>
+</div>
+<script src="main.js" defer></script>
 
-    <script>
-        fetch("https://manadoku.onrender.com/get_strings")
-            .then(response => response.json())
-            .then(data => {
-                console.log("Data received from backend:", data);
-                const gridContainer = document.getElementById("grid");
-                const modal = document.getElementById("inputModal");
-                const promptText = document.getElementById("promptText");
-                const userInput = document.getElementById("userInput");
-                const submitButton = document.getElementById("submitButton");
-                const closeButton = document.getElementById("closeButton");
-
-                const grid = data.grid; // Array of strings or objects
-
-                let currentRowObject = null;
-                let currentColObject = null;
-                let curretnRow = null;
-                let currentCol = null;
-
-                for (let row = 0; row < 4; row++) {
-                    for (let col = 0; col < 4; col++) {
-                        const gridItem = document.createElement("div");
-                        gridItem.className = "grid-item";
-
-                        let itemIndex;
-                        if (col === 0 && row < 4) itemIndex = row;
-                        if (row === 0 && col > 0 && col < 4) itemIndex = 3 + col;
-
-                        if (itemIndex !== undefined && grid[itemIndex]) {
-                            const item = grid[itemIndex];
-                            if (typeof item === "string") {
-                                let label;
-                                switch (item) {
-                                    case "1":
-                                        label = "Easy";
-                                        break;
-                                    case "2":
-                                        label = "Medium";
-                                        break;
-                                    case "3":
-                                        label = "Hard";
-                                        break;
-                                    default:
-                                        label = item; // If it's not 1, 2, or 3, just keep it as it is
-                                }
-                                gridItem.innerText = label;
-                            } else {
-                                const formattedText = `${item.name}: ${item.challenge}`;
-                                gridItem.innerText = formattedText;
-                            }
-                        } else {
-                            gridItem.classList.add("empty");
-                            gridItem.addEventListener("click", () => {
-
-                                currentRow = row
-                                currentCol = col
-
-                                currentRowObject = grid[row]
-                                currentColObject = grid[3 + col]
-
-                                const rowLabel = grid[row];
-                                const colLabel = grid[3 + col];
-
-                                // Extracting and formatting row and column labels
-                                const formattedRowLabel = typeof rowLabel === "string"
-                                    ? rowLabel
-                                    : `${rowLabel.name}: ${rowLabel.challenge}`;
-                                const formattedColLabel = typeof colLabel === "string"
-                                    ? colLabel
-                                    : `${colLabel.name}: ${colLabel.challenge}`;
-
-                                // Setting the prompt text
-                                promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
-                                modal.classList.remove("hidden");
-                            });
-                        }
-
-                        gridContainer.appendChild(gridItem);
-                    }
-                }
-
-                // Modal functionality
-                closeButton.addEventListener("click", () => {
-                    modal.classList.add("hidden");
-                    userInput.value = ""; // Clear input on close
-                });
-
-                submitButton.addEventListener("click", () => {
-                    const userAnswer = userInput.value;
-
-                    fetch("https://manadoku.onrender.com/submit_answer", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                        body: JSON.stringify({
-                            answer: userAnswer,
-                            row: currentRow,
-                            col: currentCol,
-                            rowObject: currentRowObject,
-                            colObject: currentColObject
-                        })
-                    })
-                        .then(response => response.json())
-                        .then(result => {
-                            console.log("Submission result:", result);
-                            // Handle success or error response here
-                            const gridItems = document.querySelectorAll(".grid-item");
-                            const targetBox = gridItems[result.row * 4 + result.col]; // Assuming 4x4 grid
-                            if (result.success) {
-                                targetBox.classList.remove("incorrect")
-                                targetBox.classList.add("completed");
-                                const img = document.createElement('img')
-
-                                img.src = result.img
-                                img.alt = "Card Image"
-
-                                img.style.maxWidth = "100%"
-                                img.style.maxHeight = "100%"
-                                img.style.objectFit = "contain"
-                                img.style.display = "block"
-
-                                targetBox.innerHTML = ""
-                                targetBox.appendChild(img)
-                            } else {
-                                targetBox.classList.add("incorrect")
-                            }
-                        })
-                        .catch(error => console.error("Error submitting answer:", error));
-
-                    modal.classList.add("hidden");
-                    userInput.value = ""; // Clear input after submission
-                });
-                userInput.addEventListener("keydown", (event) => {
-                    if (event.key === "Enter") {
-                        event.preventDefault();
-                        submitButton.click();
-                    }
-                });
-            })
-            .catch(error => {
-                console.error("Error fetching grid values:", error);
-                const gridContainer = document.getElementById("grid");
-                gridContainer.innerHTML = "<p>Error loading grid. Please try again.</p>";
-            });
-
-
-    </script>
 </body>
 
 </html>

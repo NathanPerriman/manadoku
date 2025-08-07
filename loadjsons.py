@@ -15,6 +15,7 @@ updatePairs = False
 
 oracleData = None
 
+
 def download_json(url, filename):
     """
     Download JSON data by first retrieving a 'download_uri' from the initial URL,
@@ -39,6 +40,7 @@ def download_json(url, filename):
     with open(filename, 'w') as file:
         json.dump(data, file, indent=4)
     print(f"Data successfully downloaded and saved to {filename}")
+
 
 def update_oracle_with_first_set_and_sets_list(oracle_path, full_path):
     """Add 'first_set' and 'sets_list' fields to each card in the 'oracle' JSON data."""
@@ -137,6 +139,7 @@ def update_oracle_with_first_set_and_sets_list(oracle_path, full_path):
 
     print("oracle.json updated with 'first_set' and 'sets_list' for each card.")
 
+
 def saveValidPairs(challengesPath, pairsPath):
     print("Opening challenges JSON...")
     with open(challengesPath, 'r') as challengeFile:
@@ -172,6 +175,7 @@ def saveValidPairs(challengesPath, pairsPath):
     with open(pairsPath, "w") as valid_pairs_file:
         json.dump(validPairs, valid_pairs_file, indent=4)
 
+
 def main():
     # Define paths for local JSON files
     oracle_path = 'oracle.json'
@@ -195,6 +199,7 @@ def main():
             with open(oracle_path) as oracle_file:
                 oracleData = json.load(oracle_file)
         saveValidPairs(challenges_path, pairs_path)
+
 
 if __name__ == "__main__":
     main()

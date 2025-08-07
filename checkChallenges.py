@@ -2,10 +2,11 @@ import json
 import re
 import random
 
+
 def meetsChallenge(challenge, entry):
     success = False
 
-    #print("Checking if entry "+entry["name"]+" meets challenge \'"+challenge["name"]+": "+challengeGoal+"\'...")
+    # print("Checking if entry "+entry["name"]+" meets challenge \'"+challenge["name"]+": "+challengeGoal+"\'...")
 
     if challenge["compare"] in entry:
         challengeGoal = challenge["challenge"]
