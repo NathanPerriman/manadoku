@@ -13,7 +13,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 4px;
+            gap: 0px;
             max-width: 100%;
             width: min(90vw, 700px);
             margin: 20px auto;
@@ -21,7 +21,7 @@
         }
 
         .grid-item {
-            background-color: white;
+            background-color: red;
             perspective: 1000px;
             aspect-ratio: 0.71 / 1;
             width: 100%;
@@ -158,6 +158,9 @@
 <div id="loadingWarning" style="text-align: center; color: red; margin-top: 10px;">
     <p>Note: This website currently uses a free Render database. The first load after a period of inactivity may take up
         to 50s.</p>
+</div>
+<div id="loadingWarning" style="text-align: center; color: black; margin-top: 10px;">
+    <p>Please note this site is still under development, and as such none of the visuals you see are finalized.</p>
 </div>
 <script src="main.js" defer></script>
 
