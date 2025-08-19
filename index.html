@@ -13,7 +13,7 @@
         .grid-container {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 0px;
+            gap: 4px;
             max-width: 100%;
             width: min(90vw, 700px);
             margin: 20px auto;
@@ -21,7 +21,7 @@
         }
 
         .grid-item {
-            background-color: red;
+            background-color: white;
             perspective: 1000px;
             aspect-ratio: 0.71 / 1;
             width: 100%;
@@ -32,6 +32,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            background-color: black;
         }
 
         .grid-item.empty {
