@@ -107,18 +107,62 @@ function labelForDifficulty(value) {
     }[value] || value;
 }
 
-function openModal(modalElements, rowLabel, colLabel) {
-    const formattedRowLabel = typeof rowLabel === "string"
-        ? labelForDifficulty(rowLabel)
-        : `${rowLabel.name}: ${rowLabel.challenge}`;
+function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
+    const { modal, promptText, userInput, submitButton, closeButton } = modalElements;
 
-    const formattedColLabel = typeof colLabel === "string"
-        ? labelForDifficulty(colLabel)
-        : `${colLabel.name}: ${colLabel.challenge}`;
+    modal.classList.remove("hidden");
 
-    modalElements.promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
-    modalElements.modal.classList.remove("hidden");
+    // Clear old handlers so they don't stack
+    submitButton.replaceWith(submitButton.cloneNode(true));
+    closeButton.replaceWith(closeButton.cloneNode(true));
+
+    const newSubmitButton = modal.querySelector("#submitButton");
+    const newCloseButton = modal.querySelector("#closeButton");
+
+    if (mode === "answer") {
+        const formattedRowLabel = typeof rowLabel === "string"
+            ? labelForDifficulty(rowLabel)
+            : `${rowLabel.name}: ${rowLabel.challenge}`;
+
+        const formattedColLabel = typeof colLabel === "string"
+            ? labelForDifficulty(colLabel)
+            : `${colLabel.name}: ${colLabel.challenge}`;
+
+        promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
+        userInput.classList.remove("hidden");
+        userInput.value = "";
+        newSubmitButton.innerText = "Submit";
+
+        newSubmitButton.addEventListener("click", () => {
+            // TODO: use userInput.value for your answer logic
+            modal.classList.add("hidden");
+        });
+    }
+    else if (mode === "rules") {
+        promptText.innerText = `Rules:\n1. Click an empty grid cell.\n2. Use the row and column clues to guess.\n3. Fill the whole grid to win!`;
+        userInput.classList.add("hidden");
+        newSubmitButton.innerText = "Close";
+
+        newSubmitButton.addEventListener("click", () => {
+            modal.classList.add("hidden");
+        });
+    }
+    else if (mode === "newGame") {
+        promptText.innerText = `Are you sure you want to start a new game? (This will reset your progress)`;
+        userInput.classList.add("hidden");
+        newSubmitButton.innerText = "Start New Game";
+
+        newSubmitButton.addEventListener("click", () => {
+            // TODO: reset game logic
+            modal.classList.add("hidden");
+        });
+    }
+
+    newCloseButton.addEventListener("click", () => {
+        modal.classList.add("hidden");
+    });
 }
+
 
 function setupModalHandlers(modalElements, onSubmit) {
     modalElements.closeButton.addEventListener("click", () => {
