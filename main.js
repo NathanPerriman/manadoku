@@ -1,12 +1,22 @@
 document.addEventListener("DOMContentLoaded", fetchAndRenderGrid);
 
-const modalElements = {
-                modal: document.getElementById("inputModal"),
-                promptText: document.getElementById("promptText"),
-                userInput: document.getElementById("userInput"),
-                submitButton: document.getElementById("submitButton"),
-                closeButton: document.getElementById("closeButton"),
-            };
+document.addEventListener("DOMContentLoaded", () => {
+    const modalElements = {
+        modal: document.getElementById("inputModal"),
+        promptText: document.getElementById("promptText"),
+        userInput: document.getElementById("userInput"),
+        submitButton: document.getElementById("submitButton"),
+        closeButton: document.getElementById("closeButton"),
+    };
+
+    document.getElementById("rulesButton").addEventListener("click", () => {
+        openModal(modalElements, null, null, "rules");
+    });
+
+    document.getElementById("newGameButton").addEventListener("click", () => {
+        openModal(modalElements, null, null, "newGame");
+    });
+});
 
 function fetchAndRenderGrid() {
     fetch("https://manadoku.onrender.com/get_strings")
@@ -16,6 +26,14 @@ function fetchAndRenderGrid() {
 
             const grid = data.grid;
             const gridContainer = document.getElementById("grid");
+
+            const modalElements = {
+                modal: document.getElementById("inputModal"),
+                promptText: document.getElementById("promptText"),
+                userInput: document.getElementById("userInput"),
+                submitButton: document.getElementById("submitButton"),
+                closeButton: document.getElementById("closeButton"),
+            };
 
             let currentRow = null;
             let currentCol = null;
