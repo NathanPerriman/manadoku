@@ -226,11 +226,12 @@ function updateGridOnSubmission(result) {
     }
 }
 
-// Attach static button handlers
-document.getElementById("rulesButton").addEventListener("click", () => {
-    openModal(modalElements, null, null, "rules");
-});
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("rulesButton").addEventListener("click", () => {
+        openModal(modalElements, null, null, "rules");
+    });
 
-document.getElementById("newGameButton").addEventListener("click", () => {
-    openModal(modalElements, null, null, "newGame");
+    document.getElementById("newGameButton").addEventListener("click", () => {
+        openModal(modalElements, null, null, "newGame");
+    });
 });
