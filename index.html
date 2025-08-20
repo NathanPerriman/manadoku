@@ -119,6 +119,13 @@
             border-radius: 4px;
         }
 
+        .left-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 10px 20px;
+        }
+
         button {
             padding: 10px 15px;
             font-size: 1em;
@@ -142,8 +149,17 @@
     </style>
 </head>
 
+<div class="header">
+    <div class="left-side">
+        <h1>Manadoku - Random MTG Grid Puzzle</h1>
+        <div>
+            <button>Rules</button>
+            <button>New Game</button>
+        </div>
+    </div>
+</div>
 <body>
-<h1>Manadoku - Random MTG Grid Puzzle</h1>
+
 <div class="grid-container" id="grid">
     <!-- The grid items will be dynamically inserted here -->
 </div>
