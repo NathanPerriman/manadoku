@@ -160,7 +160,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
     else if (mode === "rules") {
         promptText.innerText = `Manadoku is a grid guessing game, inspired by sites like Immaculate Grid and Pokedoku, based on Magic: The Gathering.
         The goal is to try to find a card that fits each of the 9 spots in the grid, given the grid's vertical and horizontal clues.
-        Clicking on one of the card backs shows the 2 requirements that space needs to meet,
+        Clicking on one of the card backs shows the 2 requirements that space needs to meet,\n
         and gives you a text box to type the name of a card that may fit there.
         For example, if the two clues were "Power: 6" and "Keyword: Trample", you could type "Colossal Dreadmaw" to fit that space.
         Try to fill out all 9 spaces in order to win!`;
@@ -173,7 +173,8 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         });
     }
     else if (mode === "newGame") {
-        promptText.innerText = `Are you sure you want to start a new game? (This will reset your progress)`;
+        promptText.innerText = `Are you sure you want to start a new game? (This will reset your progress) \n
+        [This feature hasn't been implemented yet, and will simply close the window. Check back soon!]`;
         userInput.classList.add("hidden");
         newSubmitButton.innerText = "Start New Game";
         newCloseButton.style.display = "inline-block";

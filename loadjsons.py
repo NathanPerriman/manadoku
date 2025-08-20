@@ -9,9 +9,9 @@ from datetime import datetime
 ORACLE_API_URL = "https://api.scryfall.com/bulk-data/oracle-cards"
 FULL_API_URL = "https://api.scryfall.com/bulk-data/default-cards"
 
-downloadNew = False
+downloadNew = True
 updateOracle = True
-updatePairs = False
+updatePairs = True
 
 oracleData = None
 
