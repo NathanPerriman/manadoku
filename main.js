@@ -132,6 +132,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         userInput.classList.remove("hidden");
         userInput.value = "";
         newSubmitButton.innerText = "Submit";
+        newCloseButton.style.display = "inline-block";
 
         newSubmitButton.addEventListener("click", () => {
             // TODO: use userInput.value for your answer logic
@@ -142,6 +143,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         promptText.innerText = `Rules:\n1. Click an empty grid cell.\n2. Use the row and column clues to guess.\n3. Fill the whole grid to win!`;
         userInput.classList.add("hidden");
         newSubmitButton.innerText = "Close";
+        newCloseButton.style.display = "none";
 
         newSubmitButton.addEventListener("click", () => {
             modal.classList.add("hidden");
@@ -151,6 +153,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         promptText.innerText = `Are you sure you want to start a new game? (This will reset your progress)`;
         userInput.classList.add("hidden");
         newSubmitButton.innerText = "Start New Game";
+        newCloseButton.style.display = "inline-block";
 
         newSubmitButton.addEventListener("click", () => {
             // TODO: reset game logic
