@@ -158,7 +158,11 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         });
     }
     else if (mode === "rules") {
-        promptText.innerText = `Rules:\n1. Click an empty grid cell.\n2. Use the row and column clues to guess.\n3. Fill the whole grid to win!`;
+        promptText.innerText = `Manadoku is a grid guessing game, inspired by sites like Immaculate Grid and Pokedoku, based on Magic: The Gathering.
+        The goal is to try to find a card that fits each of the 9 spots in the grid, given the grid's vertical and horizontal clues.
+        Clicking on one of the card backs shows the 2 requirements that space needs to meet, and gives you a text box to type the name of a card that may fit there.
+        For example, if the two clues were "Power: 6" and "Keyword: Trample", you could type "Colossal Dreadmaw" to fit that space.
+        Try to fill out all 9 spaces in order to win!`;
         userInput.classList.add("hidden");
         newSubmitButton.innerText = "Close";
         newCloseButton.style.display = "none";
