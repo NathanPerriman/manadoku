@@ -130,12 +130,8 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
 
     modal.classList.remove("hidden");
 
-    // Clear old handlers so they don't stack
-    submitButton.replaceWith(submitButton.cloneNode(true));
-    closeButton.replaceWith(closeButton.cloneNode(true));
-
-    const newSubmitButton = modal.querySelector("#submitButton");
-    const newCloseButton = modal.querySelector("#closeButton");
+    submitButton.replaceWith(submitButton);
+    closeButton.replaceWith(closeButton);
 
     if (mode === "answer") {
         const formattedRowLabel = typeof rowLabel === "string"
@@ -162,6 +158,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
                 colObject: currentColObject
             };
             handleSubmitAnswer(answerData, modalElements);
+
             modal.classList.add("hidden");
         });
     }
