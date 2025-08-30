@@ -153,7 +153,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         newCloseButton.style.display = "inline-block";
 
         newSubmitButton.addEventListener("click", () => {
-            OnSubmit();
+            value = userInput.value;
             modal.classList.add("hidden");
         });
     }
