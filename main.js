@@ -145,10 +145,10 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
         userInput.classList.remove("hidden");
         userInput.value = "";
-        newSubmitButton.innerText = "Submit";
-        newCloseButton.style.display = "inline-block";
+        submitButton.innerText = "Submit";
+        closeButton.style.display = "inline-block";
 
-        newSubmitButton.addEventListener("click", () => {
+        submitButton.addEventListener("click", () => {
             const userAnswer = userInput.value;
             const answerData = {
                 answer: userAnswer,
@@ -170,10 +170,10 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         For example, if the two clues were "Power: 6" and "Keyword: Trample", you could type "Colossal Dreadmaw" to fit that space.
         Try to fill out all 9 spaces in order to win!`;
         userInput.classList.add("hidden");
-        newSubmitButton.innerText = "Close";
-        newCloseButton.style.display = "none";
+        submitButton.innerText = "Close";
+        closeButton.style.display = "none";
 
-        newSubmitButton.addEventListener("click", () => {
+        submitButton.addEventListener("click", () => {
             modal.classList.add("hidden");
         });
     }
@@ -181,16 +181,16 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
         promptText.innerText = `Are you sure you want to start a new game? (This will reset your progress) \n
         [This feature hasn't been implemented yet, and will simply close the window. Check back soon!]`;
         userInput.classList.add("hidden");
-        newSubmitButton.innerText = "Start New Game";
-        newCloseButton.style.display = "inline-block";
+        submitButton.innerText = "Start New Game";
+        closeButton.style.display = "inline-block";
 
-        newSubmitButton.addEventListener("click", () => {
+        submitButton.addEventListener("click", () => {
             // TODO: reset game logic
             modal.classList.add("hidden");
         });
     }
 
-    newCloseButton.addEventListener("click", () => {
+    closeButton.addEventListener("click", () => {
         modal.classList.add("hidden");
     });
 }
