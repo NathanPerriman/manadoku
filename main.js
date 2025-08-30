@@ -142,7 +142,7 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
             ? labelForDifficulty(colLabel)
             : `${colLabel.name}: ${colLabel.challenge}`;
 
-        promptText.innerText = `Row: ${formattedRowLabel}, Column: ${formattedColLabel}`;
+        promptText.innerText = `${formattedRowLabel} + ${formattedColLabel}`;
         userInput.classList.remove("hidden");
         userInput.value = "";
         submitButton.innerText = "Submit";
