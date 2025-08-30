@@ -1,0 +1,38 @@
+{
+  "challenges": [
+    {
+      "name": "Keyword",
+      "compare": "keywords",
+      "difficulty": "3",
+      "challenge": "Flashback",
+      "progresses": "T"
+    },
+    {
+      "name": "Format Legalities",
+      "compare": "legalities",
+      "difficulty": "2",
+      "challenge": "commanderBanned",
+      "progresses": "T"
+    },
+    {
+      "name": "Format Legalities",
+      "compare": "legalities",
+      "difficulty": "2",
+      "challenge": "modernBanned",
+      "progresses": "T"
+    },
+    {
+      "name": "Format Legalities",
+      "compare": "legalities",
+      "difficulty": "2",
+      "challenge": "standardLegal",
+      "progresses": "T"
+    },
+    {
+      "name": "Format Legalities",
+      "compare": "legalities",
+      "difficulty": "3",
+      "challenge": "pauperBanned",
+      "progresses": "T"
+    }
+  ]}

@@ -1,5 +1,6 @@
 import json
 import re
+from collections import Counter
 import random
 
 
@@ -22,7 +23,7 @@ def meetsChallenge(challenge, entry):
                 success = (len(entryComp) >= 2)
             else:
                 submission_string = ''.join(entryComp)
-                success = all(char in submission_string for char in challengeGoal)
+                success = Counter(submission_string) == Counter(challengeGoal)
 
         elif challenge["name"] == "Mana Cost":
             if challengeGoal == "{X}" or challengeGoal == "{X}{X}":

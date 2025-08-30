@@ -221,13 +221,6 @@
       "name": "Keyword",
       "compare": "keywords",
       "difficulty": "3",
-      "challenge": "Flashback",
-      "progresses": "T"
-    },
-    {
-      "name": "Keyword",
-      "compare": "keywords",
-      "difficulty": "3",
       "challenge": "Double strike",
       "progresses": "T"
     },
@@ -304,6 +297,13 @@
     {
       "name": "Colour",
       "compare": "colors",
+      "difficulty": "1",
+      "challenge": "WUBRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
       "difficulty": "2",
       "challenge": "Colourless",
       "progresses": "T"
@@ -446,6 +446,41 @@
       "compare": "colors",
       "difficulty": "3",
       "challenge": "BRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
+      "difficulty": "3",
+      "challenge": "WUBR",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
+      "difficulty": "3",
+      "challenge": "WUBG",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
+      "difficulty": "3",
+      "challenge": "WURG",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
+      "difficulty": "3",
+      "challenge": "WBRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Colour",
+      "compare": "colors",
+      "difficulty": "3",
+      "challenge": "UBRG",
       "progresses": "T"
     },
     {
@@ -493,6 +528,13 @@
     {
       "name": "Identity",
       "compare": "color_identity",
+      "difficulty": "1",
+      "challenge": "WUBRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
       "difficulty": "2",
       "challenge": "Colourless",
       "progresses": "T"
@@ -635,6 +677,41 @@
       "compare": "color_identity",
       "difficulty": "3",
       "challenge": "BRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
+      "difficulty": "3",
+      "challenge": "WUBR",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
+      "difficulty": "3",
+      "challenge": "WUBG",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
+      "difficulty": "3",
+      "challenge": "WURG",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
+      "difficulty": "3",
+      "challenge": "WBRG",
+      "progresses": "T"
+    },
+    {
+      "name": "Identity",
+      "compare": "color_identity",
+      "difficulty": "3",
+      "challenge": "UBRG",
       "progresses": "T"
     },
     {
@@ -817,34 +894,6 @@
       "compare": "produced_mana",
       "difficulty": "3",
       "challenge": "G",
-      "progresses": "T"
-    },
-    {
-      "name": "Format Legalities",
-      "compare": "legalities",
-      "difficulty": "2",
-      "challenge": "commanderBanned",
-      "progresses": "T"
-    },
-    {
-      "name": "Format Legalities",
-      "compare": "legalities",
-      "difficulty": "2",
-      "challenge": "modernBanned",
-      "progresses": "T"
-    },
-    {
-      "name": "Format Legalities",
-      "compare": "legalities",
-      "difficulty": "2",
-      "challenge": "standardLegal",
-      "progresses": "T"
-    },
-    {
-      "name": "Format Legalities",
-      "compare": "legalities",
-      "difficulty": "3",
-      "challenge": "pauperBanned",
       "progresses": "T"
     },
     {
