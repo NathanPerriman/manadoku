@@ -130,8 +130,8 @@ function openModal(modalElements, rowLabel, colLabel, mode = "answer") {
 
     modal.classList.remove("hidden");
 
-    submitButton.replaceWith(submitButton);
-    closeButton.replaceWith(closeButton);
+    submitButton.onclick = null;
+    closeButton.onclick = null;
 
     if (mode === "answer") {
         const formattedRowLabel = typeof rowLabel === "string"
